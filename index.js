@@ -1,5 +1,19 @@
 const express = require('express')
 const cors = require('cors')
+const mongoose = require('mongoose')
+
+//WIP
+const url = `mongodb+srv://tamosz:${password}@cluster0.bmeey.mongodb.net/note-app?retryWrites=true&w=majority`
+
+mongoose.connect(url)
+
+const noteSchema = new mongoose.Schema({
+  const: String,
+  date: Date,
+  important: Boolean,
+})
+
+const Note = mongoose.model('Note', noteSchema)
 
 const app = express()
 
